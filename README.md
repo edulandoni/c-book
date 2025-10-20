@@ -1,4 +1,3 @@
-C Programming: A Modern Approach (2nd Edition) Exercises
 Welcome to my collection of exercises and notes from K. N. King's C Programming: A Modern Approach (2nd Edition). This repo helps me practice C in a structured way using modern tools.
 Quick Setup
 
