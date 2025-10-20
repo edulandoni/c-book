@@ -1,26 +1,26 @@
-Welcome to my collection of exercises and notes from K. N. King's C Programming: A Modern Approach (2nd Edition). This repo helps me practice C in a structured way using modern tools.
-Quick Setup
+# C Programming: A Modern Approach (2nd Edition) Exercises
 
-Prerequisites: Clang or GCC, Make. Optional: GDB (debugger) and Valgrind (memory checker).
-On Fedora: Run sudo dnf groupinstall "Development Tools" -y && sudo dnf install -y clang gdb valgrind.
+Welcome to my collection of exercises and notes from K. N. King's *C Programming: A Modern Approach* (2nd Edition). This repo helps me practice C in a structured way using modern tools.
 
-Building and Running
+## Quick Setup
+- **Prerequisites**: Clang or GCC, Make. Optional: GDB (debugger) and Valgrind (memory checker).
+- **On Fedora**: Run `sudo dnf groupinstall "Development Tools" -y && sudo dnf install -y clang gdb valgrind`.
+
+## Building and Running
 Each exercise has its own Makefile for simplicity.
+- From repo root: `make DIR=c01/e01 run` (replace `c01/e01` with the chapter/exercise).
+- Inside an exercise folder: `make run` to build and execute.
+- Clean up: `make clean`.
 
-From repo root: make DIR=c01/e01 run (replace c01/e01 with the chapter/exercise).
-Inside an exercise folder: make run to build and execute.
-Clean up: make clean.
+The Makefiles use C17 standard with warnings enabled (`-Wall -Wextra -Wpedantic`) and sanitizers for safer code.
 
-The Makefiles use C17 standard with warnings enabled (-Wall -Wextra -Wpedantic) and sanitizers for safer code.
-Directory Structure
+## Directory Structure
 Organized by chapter and exercise:
+- `cNN/eMM` (e.g., `c01/e01` for Chapter 1, Exercise 1).
 
-cNN/eMM (e.g., c01/e01 for Chapter 1, Exercise 1).
+## Conventions
+- No binaries (like `app` or `*.o`) committed—keep the repo clean!
+- Code formatted with `clang-format` for consistency.
 
-Conventions
-
-No binaries (like app or *.o) committed—keep the repo clean!
-Code formatted with clang-format for consistency.
-
-License
+## License
 MIT for my code. No book content included here—buy the book for that! 📖
