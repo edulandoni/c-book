@@ -1,19 +1,27 @@
-C Programming: A Modern Approach — 2nd Edition (Exercises)
+C Programming: A Modern Approach (2nd Edition) Exercises
+Welcome to my collection of exercises and notes from K. N. King's C Programming: A Modern Approach (2nd Edition). This repo helps me practice C in a structured way using modern tools.
+Quick Setup
 
-Exercises and notes for K. N. King’s book. 
+Prerequisites: Clang or GCC, Make. Optional: GDB (debugger) and Valgrind (memory checker).
+On Fedora: Run sudo dnf groupinstall "Development Tools" -y && sudo dnf install -y clang gdb valgrind.
 
-Built with clang, standard C17, one Makefile per exercise. Layout uses cNN/eMM directories such as c01/e01, c01/e02, etc. 
+Building and Running
+Each exercise has its own Makefile for simplicity.
 
-Prerequisites: clang or gcc and make; optionally gdb and valgrind. 
+From repo root: make DIR=c01/e01 run (replace c01/e01 with the chapter/exercise).
+Inside an exercise folder: make run to build and execute.
+Clean up: make clean.
 
-On Fedora, install with: sudo dnf groupinstall "Development Tools" -y && sudo dnf install -y clang gdb valgrind. 
+The Makefiles use C17 standard with warnings enabled (-Wall -Wextra -Wpedantic) and sanitizers for safer code.
+Directory Structure
+Organized by chapter and exercise:
 
-To run from the repo root use: make DIR=c01/e01 run. To run inside an exercise use: make run. 
+cNN/eMM (e.g., c01/e01 for Chapter 1, Exercise 1).
 
-Per-exercise Makefile template: CC:=clang; CFLAGS:=-std=c17 -Wall -Wextra -Wpedantic -O0 -g; SAN:=-fsanitize=address,undefined -fno-omit-frame-pointer; BIN:=app; SRC:=$(wildcard *.c); target all builds with $(CC) $(CFLAGS) $(SAN) $(SRC) -o $(BIN); target run depends on all and executes ./$(BIN); target clean removes $(BIN); declare .PHONY for all run clean. 
+Conventions
 
-Conventions: directories are cNN/eMM (chapter NN, exercise MM); do not commit binaries like app or *.o; format code with clang-format. 
+No binaries (like app or *.o) committed—keep the repo clean!
+Code formatted with clang-format for consistency.
 
-License: MIT for my code; no book content included.
-
-
+License
+MIT for my code. No book content included here—buy the book for that! 📖
