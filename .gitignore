@@ -1,1 +1,17 @@
-*.o *.a *.so app build/ compile_commands.json vgcore.*
+# C build artifacts
+*.o
+*.a
+*.so
+app
+build/
+compile_commands.json
+vgcore.*
+
+# Cobertura (si usás gcov/lcov)
+*.gcno
+*.gcda
+*.gcov
+
+# Vim/Neovim swap
+*.swp
+*.swo
